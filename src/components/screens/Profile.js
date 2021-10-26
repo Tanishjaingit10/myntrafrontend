@@ -2,7 +2,7 @@ import React from 'react'
 
 function Profile() {
     return (
-        <div>
+        <div className="h-screen w-screen flex items-center justify-center">
             Profile
         </div>
     )
