@@ -6,11 +6,6 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* border: 0.5px solid red; */
-}
-
-body{
-    background-color: rgb(54, 54, 54);
 }
