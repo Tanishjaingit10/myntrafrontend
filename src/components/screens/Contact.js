@@ -9,7 +9,7 @@ function Contact() {
                     <div className="row row-content align-items-center">
                         <div className="col-12 col-sm-6 offset-sm-1">
                             <h5>Registered Office Address</h5>
-                            <address style="font-size: 100%">
+                            <address style={{fontSize:'100%'}}>
                                 Buildings Alyssa,<br/>
                                 Begonia and Clover situated in Embassy Tech Village,<br/>
                                 Outer Ring Road,<br/>
