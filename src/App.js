@@ -1,5 +1,5 @@
 import './App.css';
-import ContextProvider from './context/Context'
+import ContextProvider from './Store/Context'
 import Router from './Router'
 
 function App() {

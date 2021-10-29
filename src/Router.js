@@ -7,7 +7,7 @@ import Home from "./components/screens/Home"
 import Signin from "./components/screens/Login"
 import Profile from "./components/screens/Profile"
 import Signup from "./components/screens/Signup"
-import { appContext } from './context/Context'
+import { appContext } from './Store/Context'
 
 function Router() {
 

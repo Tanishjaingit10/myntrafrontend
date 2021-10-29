@@ -4,7 +4,7 @@ export const appContext = React.createContext({})
 
 function ContextProvider({ children }) {
     const [context, setContext] = useState({
-        loggedIn:true,
+        loggedIn:false,
         token:"",
         user:{}
     })
