@@ -6,7 +6,7 @@ function Contact() {
             <div className="col-12">
                 <h3>Contact Us</h3>
                 <hr/>
-                    <div className="row row-content align-items-center" style={{margin: '0px auto',padding:'50px 0px 50px 0px',borderBottom:'1px rigid',minHeight:'400px'}}>
+                    <div className="row row-content align-items-center">
                         <div className="col-12 col-sm-6 offset-sm-1">
                             <h5>Registered Office Address</h5>
                             <address style={{fontSize:'100%'}}>
@@ -23,7 +23,7 @@ function Contact() {
                             <p>Telephone: +91-80-61561999</p>
                         </div>
                     </div>
-                    <div className="row row-content" style={{margin: '0px auto',padding:'50px 0px 50px 0px',borderBottom:'1px rigid',minHeight:'400px'}}>
+                    <div className="row row-content">
                         <div className="col-12">
                             <h3>Send us your Feedback</h3>
                         </div>
