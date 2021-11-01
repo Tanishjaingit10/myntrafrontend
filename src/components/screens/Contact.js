@@ -28,7 +28,7 @@ function Contact() {
                     <p><b>Telephone</b>: +91-80-61561999</p>
                 </div>
             </div>
-            <div className="row row-content">
+            <div className="row row-content overflow-x-hidden">
                 <div className="col-12 offset-md-1">
                     <h3>Send us your Feedback</h3>
                     <br/>
@@ -36,43 +36,43 @@ function Contact() {
                 <div className="col-12 col-md-9 offset-md-1">
                     <form>
                         <div className="form-group row">
-                            <label for="firstname" className="col-md-2 col-form-label"><b>First Name</b></label>
+                            <label for="firstname" className="col-md-2 col-form-label"><b>First Name:</b></label>
                             <div className="col-md-10">
-                                <input type="text" className="form-control" id="firstname" name="firstname" placeholder="First Name" />
+                                <input type="text" className="shadow-sm form-control" id="firstname" name="firstname" placeholder="First Name" />
                             </div>
                         </div>
                         <br/>
                         <div className="form-group row">
-                            <label for="lastname" className="col-md-2 col-form-label"><b>Last Name</b></label>
+                            <label for="lastname" className="col-md-2 col-form-label"><b>Last Name:</b></label>
                             <div className="col-md-10">
-                                <input type="text" className="form-control" id="lastname" name="lastname" placeholder="Last Name" />
+                                <input type="text" className="shadow-sm form-control" id="lastname" name="lastname" placeholder="Last Name" />
                             </div>
                         </div>
                         <br/>
                         <div className="form-group row">
-                            <label for="telnum" className="col-12 col-md-2 col-form-label"><b>Contact No.</b></label>
+                            <label for="telnum" className="col-12 col-md-2 col-form-label"><b>Contact No.:</b></label>
                             <div className="col-12 col-md-10">
-                                <input type="tel" className="form-control" id="telnum" name="telnum" placeholder="Tel. Number" />
+                                <input type="tel" className="shadow-sm form-control" id="telnum" name="telnum" placeholder="Tel. Number" />
                             </div>
                         </div>
                         <br/>
                         <div className="form-group row">
-                            <label for="emailid" className="col-md-2 col-form-label"><b>Email</b></label>
+                            <label for="emailid" className="col-md-2 col-form-label"><b>Email:</b></label>
                             <div className="col-md-10">
-                                <input type="email" className="form-control" id="emailid" name="emailid" placeholder="Email" />
+                                <input type="email" className="shadow-sm form-control" id="emailid" name="emailid" placeholder="Email" />
                             </div>
                         </div>
                         <br/>
                         <div className="form-group row">
-                            <label for="feedback" className="col-md-2 col-form-label"><b>Your Feedback</b></label>
+                            <label for="feedback" className="col-md-2 col-form-label"><b>Your Feedback:</b></label>
                             <div className="col-md-10">
-                                <textarea className="form-control" id="feedback" name="feedback" rows="12"></textarea>
+                                <textarea className="shadow-md form-control" id="feedback" name="feedback" rows="9"></textarea>
                             </div>
                         </div>
                         <br/>
                         <div className="form-group row">
                             <div className="offset-md-2 col-md-10">
-                                <button type="submit" className="btn btn-primary"><b>Send Feedback</b></button>
+                                <button type="submit" className="shadow-md btn btn-primary"><b>Send Feedback</b></button>
                             </div>
                         </div>
                     </form>

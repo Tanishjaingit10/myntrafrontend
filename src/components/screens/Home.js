@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React from 'react'
+import { BACKEND } from '../../Keys';
 import { Carousel, Card, Button, Row, Col, Modal } from "react-bootstrap";
 
 function MyVerticallyCenteredModal(props) {
