@@ -9,6 +9,7 @@ import Contact from "./components/screens/Contact"
 import Games from "./components/screens/Games"
 import Signin from "./components/screens/Login"
 import Profile from "./components/screens/Profile"
+import Referral from "./components/screens/Referral"
 import Signup from "./components/screens/Signup"
 import { appContext } from './Store/Context'
 
@@ -21,12 +22,13 @@ function Router() {
         <BrowserRouter>
             <Navbar/>
             <Route path="/" exact> <Home/> </Route>
-            <Route path="/signin" exact> { loggedIn? <Redirect to="/profile"/>:<Signin/>} </Route>
-            <Route path="/profile" exact> { loggedIn? <Profile/>:<Redirect to="/"/>}  </Route>
-            <Route path="/cart" exact> { loggedIn? <Cart/>:<Redirect to="/"/>}  </Route>
-            <Route path="/contact" exact> { loggedIn? <Contact/>:<Redirect to="/"/>}  </Route>
-            <Route path="/games" exact> { loggedIn? <Games/>:<Redirect to="/"/>}  </Route>
-            <Route path="/signup" exact> { loggedIn? <Redirect to="/profile"/>:<Signup/>} </Route>
+            <Route path="/signin" exact> { loggedIn? <Redirect to="/"/>:<Signin/>} </Route>
+            <Route path="/referral" exact> { loggedIn? <Referral/>:<Redirect to="/signup"/>}  </Route>
+            <Route path="/profile" exact> { loggedIn? <Profile/>:<Redirect to="/signin"/>}  </Route>
+            <Route path="/cart" exact> { loggedIn? <Cart/>:<Redirect to="/signin"/>}  </Route>
+            <Route path="/contact" exact> { loggedIn? <Contact/>:<Redirect to="/signin"/>}  </Route>
+            <Route path="/games" exact> { loggedIn? <Games/>:<Redirect to="/signin"/>}  </Route>
+            <Route path="/signup" exact> { loggedIn? <Redirect to="/referral"/>:<Signup/>} </Route>
         </BrowserRouter>
     )
 }
