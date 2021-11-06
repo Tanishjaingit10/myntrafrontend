@@ -21,10 +21,10 @@ const Footer = () => {
                         <h5>Keep In Touch</h5>
                         <br/>
                         <ul className="list-unstyled d-sm-flex justify-content-center">
-                            <li><a className="btn btn-facebook btn-lg" href="https://www.facebook.com/myntra" target="_blank"><FaFacebook /></a></li>
-                            <li><a className="btn btn-twitter btn-lg" href="https://twitter.com/myntra" target="_blank"><FaTwitter /></a></li>
-                            <li><a className="btn btn-google btn-lg" href="https://www.youtube.com/c/myntra" target="_blank"><FaYoutube /></a></li>
-                            <li><a className="btn btn-instagram btn-lg" href="https://www.instagram.com/myntra/"  target="_blank"><FaInstagram /></a></li>
+                            <li><a className="btn btn-facebook btn-lg" rel="noreferrer" href="https://www.facebook.com/myntra" target="_blank"><FaFacebook /></a></li>
+                            <li><a className="btn btn-twitter btn-lg" rel="noreferrer" href="https://twitter.com/myntra" target="_blank"><FaTwitter /></a></li>
+                            <li><a className="btn btn-google btn-lg" rel="noreferrer" href="https://www.youtube.com/c/myntra" target="_blank"><FaYoutube /></a></li>
+                            <li><a className="btn btn-instagram btn-lg" rel="noreferrer" href="https://www.instagram.com/myntra/"  target="_blank"><FaInstagram /></a></li>
                         </ul>
                     </div>
                 </div>

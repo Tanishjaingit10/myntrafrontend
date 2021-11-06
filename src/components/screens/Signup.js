@@ -5,9 +5,11 @@ import GoogleLogin from 'react-google-login'
 import axios from 'axios'
 import { BACKEND } from '../../Keys'
 import { appContext } from '../../Store/Context'
+import Referral from './Referral'
 
 function Signup() {
     const [context,setContext] = useContext(appContext)
+    const [reff,setReff] = useState(false)
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -18,6 +20,7 @@ function Signup() {
         .then(res=>{
             const data = res.data
             setContext(prev=>{return {...prev,token:data?.token,user:data?.user,loggedIn:true}})
+            setReff(true)
         })
         .catch(err=>alert(err.response.data.error + ". Please login"))
     }
@@ -26,6 +29,7 @@ function Signup() {
         .then(res=>{
             const data = res.data
             setContext(prev=>{return {...prev,token:data?.token,user:data?.user,loggedIn:true}})
+            setReff(true)
         })
         .catch(err=>alert(err.response.data.error))
     }

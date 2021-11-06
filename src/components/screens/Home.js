@@ -31,17 +31,12 @@ function Home() {
     const [top3, setTop3] = useState([])
     useEffect(() => {
         axios.get(`${BACKEND}`)
-        console.log(`${BACKEND}/stars`)
         axios.get(`${BACKEND}/stars`)
         .then(res => {
             setTop3(res.data)
         })
         .catch(err=>console.log(err))
     }, [])
-    
-    const img1 = "https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2019/3/31/e27302d6-a2c4-4fd3-a2b1-c3bd92a8b2401554050196883-ESPRIT_Desktop_Banner.jpg";
-    const img2 = "https://assets.myntassets.com/w_980,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2019/3/30/e5a955ac-e224-4b83-aaac-e86674ddb7471553959219090-Zaveri_Desktop_Banner.jpg";
-    const img3 = "https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
     const [modalShow, setModalShow] = React.useState(false);
 
     // const [modalShow, setModalShow] = React.useState(false);
@@ -175,6 +170,7 @@ function Home() {
                     </>
                 }
             </div>
+            <Footer/>
         </div>
     );
 }

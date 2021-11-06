@@ -1,22 +1,45 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import Footer from "../Footer"
 import { Button, Accordion } from "react-bootstrap";
 import { Link } from 'react-router-dom'
+import { appContext } from '../../Store/Context';
+import axios from 'axios';
+import { BACKEND } from '../../Keys';
+import {FiCopy}  from 'react-icons/fi'
 
 function Profile() {
+    const [context, setContext] = useContext(appContext)
+
+    useEffect(() => {
+        let config = {
+            headers: {
+                'Authorization': `Bearer ${context?.token}`
+            }
+        }
+        axios.get(`${BACKEND}/getUser`,config)
+        .then(res=>{setContext(prev=>{return{...prev,user:res.data}})})
+        .catch(err=>console.log(err))
+    }, [context?.token,setContext])
+
+    const copyReff = () =>{
+        navigator.clipboard.writeText(context.user.referral)
+        document.execCommand('copy');
+    }
+    
     return (
         <div>
             <div className="container-fluid" style={{ marginTop: '120px' }}>
                 <div className="card mb-4" style={{ maxWidth: '500px', margin: 'auto' }}>
-                    <div className="row g-0">
+                    <div className="row g-0 items-center">
                         <div className="col-md-4">
-                            <img src="https://www.w3schools.com/bootstrap5/img_avatar3.png" className="img-fluid rounded" alt="Profile pic" />
+                            <img src={context.user?.picture} className="img-fluid rounded-full w-full" alt="Profile pic" />
                         </div>
                         <div className="col-md-8">
-                            <div className="card-body">
-                                <h5 className="card-title text-center">Name </h5>
+                            <div className="card-body flex items-center justify-center flex-col">
+                                <h5 className="card-title text-center">{context.user?.name}</h5>
                                 <br />
-                                <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p className="card-text">{context.user?.email}</p>
+                                <p className="card-text flex items-center w-40 justify-around"><b>Referral: </b>{context.user?.referral} <button onClick={copyReff}><FiCopy/></button></p>
                             </div>
                         </div>
                     </div>
@@ -25,7 +48,7 @@ function Profile() {
                 <div className="card mb-5" style={{ maxWidth: '500px', margin: 'auto' }}>
                     <h5 className="card-header text-center"><span className="text-xl font-bold text-pink-500">Myntra Coins</span></h5>
                     <div className="card-body">
-                        <h5 className="card-title mb-4 text-center">Total number of myntra coins earned - <span className="text-pink-500">100</span></h5>
+                        <h5 className="card-title mb-4 text-center">Total number of myntra coins earned - <span className="text-pink-500">{context.user?.coins}</span></h5>
 
                         <Accordion >
                             <Accordion.Item eventKey="0">
