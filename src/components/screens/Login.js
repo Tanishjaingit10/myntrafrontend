@@ -18,7 +18,7 @@ function Login() {
             const data = res.data
             setContext(prev=>{return {...prev,token:data?.token,user:data?.user,loggedIn:true}})
         })
-        .catch(err=>console.log(err.response.data))
+        .catch(err=>alert(err.response.data.error))
     }
     const handleGlogin = (response)=>{
         axios.post(`${BACKEND}/googlelogin`,{"token":response.tokenId})
@@ -34,7 +34,7 @@ function Login() {
     return (
         <div className="h-screen pt-20 flex items-center bg-gray-100 justify-center w-full">
             <div className="p-10 pt-8 w-11/12 md:w-3/5 sm:w-5/6 lg:w-1/2 rounded-2xl bg-white shadow-md flex items-center flex-col">
-                <h1 className="mb-2 text-3xl p-3 text-pink-500"> Signin </h1>
+                <h1 className="mb-2 text-3xl p-3 text-pink-500"> Sign in </h1>
                 <div className="w-11/12 sm:w-5/6 md:3/4 lg:w-2/3 xl:w-1/2 flex flex-col items-center">
                     <form className="w-full flex flex-col text-gray-700" onSubmit={(e)=>loginHandler(e)}>
                         <label htmlFor="email">Email</label>

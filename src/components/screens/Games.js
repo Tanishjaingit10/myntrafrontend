@@ -1,9 +1,13 @@
 import React from 'react'
+import Footer from "../Footer"
 
 function Games() {
     return (
-        <div className="h-screen w-screen flex items-center justify-center">
-            Games
+        <div>
+            <div className="h-screen w-screen flex items-center justify-center">
+                Games
+            </div>
+            <Footer />
         </div>
     )
 }
