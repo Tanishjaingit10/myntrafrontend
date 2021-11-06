@@ -127,7 +127,7 @@ function Home() {
                 {
                     top3.length>2 &&
                     <>
-                        <h2 style={{ marginLeft: '10px' }}>Star of the Week</h2>
+                        <h2 style={{ marginLeft: '10px' }}>Stars of the Week</h2>
                         <div className="container-fluid" style={{ marginTop: '10px', marginBottom: '40px' }}>
                             <Row xs={1} md={2} className="g-4" style={{ marginTop: '20px' }}>
                                 <Col style={{ margin: 'auto' }}>
