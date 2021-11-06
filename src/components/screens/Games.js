@@ -61,12 +61,13 @@ function Games() {
     return (
         <div>
             <div style={{ marginTop: '120px' }}>
-                <h2 className="text-center mb-5">Play your daily quiz here to earn Myntra coins</h2>
-                <div className="app mb-5" style={{ margin: 'auto' }}>
+                <h2 className="text-center mb-5">Daily Quiz</h2>
+                <div className="app w-1/2 flex h-80 rounded-2xl p-8 overflow-hidden shadow-lg mb-5" style={{ margin: 'auto' }}>
                     {showScore ? (
-                        <div className='score-section'>
-                            You scored {score} out of {questions.length} <br/>
-                            & earned {4*score} Myntra Coins
+                        <div className='score-section flex flex-col w-full items-center justify-center'>
+                            <h2 className="mb-8 mt-2">CONGRATULATIONS!</h2>
+                            <p>You scored {score} out of {questions.length}</p>
+                            <p>Coins earned: {4*score}</p>
                         </div>
                     ) : (
                         <>
@@ -78,7 +79,7 @@ function Games() {
                             </div>
                             <div className='answer-section'>
                                 {questions[currentQuestion].answerOptions.map((answerOption) => (
-                                    <button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+                                    <button className="rounded-lg p-2" onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
                                 ))}
                             </div>
                         </>

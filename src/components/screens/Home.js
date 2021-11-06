@@ -1,9 +1,10 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { BACKEND } from '../../Keys';
 import { Carousel, Card, Button, Row, Col, Modal } from "react-bootstrap";
 import Footer from "../Footer"
 import Data from "./Data"
+import { appContext } from '../../Store/Context';
 
 function MyVerticallyCenteredModal(props) {
     return (
@@ -29,6 +30,7 @@ function MyVerticallyCenteredModal(props) {
 function Home() {
     // wake call to backend
     const [top3, setTop3] = useState([])
+    const [context,setContext] = useContext(appContext)  
     useEffect(() => {
         axios.get(`${BACKEND}`)
         axios.get(`${BACKEND}/stars`)
@@ -80,7 +82,7 @@ function Home() {
                                                 </Card.Text>
                                                 <Button variant="primary" onClick={() => {
                                                     setModalShow(true);
-
+                                                    setContext(prev=>{return{...prev,cart:[...prev.cart,item]}})
                                                 }}>Add to Cart</Button>
                                                 <MyVerticallyCenteredModal
                                                     show={modalShow}
@@ -110,7 +112,7 @@ function Home() {
                                                 </Card.Text>
                                                 <Button variant="primary" onClick={() => {
                                                     setModalShow(true);
-
+                                                    setContext(prev=>{return{...prev,cart:[...prev.cart,item]}})
                                                 }}>Add to Cart</Button>
                                                 <MyVerticallyCenteredModal
                                                     show={modalShow}

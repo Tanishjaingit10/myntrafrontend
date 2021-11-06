@@ -6,7 +6,8 @@ function ContextProvider({ children }) {
     const [context, setContext] = useState({
         loggedIn:false,
         token:"",
-        user:{}
+        user:{},
+        cart:[]
     })
     return (
         <appContext.Provider value = {[context,setContext]}>
