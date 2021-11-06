@@ -45,7 +45,7 @@ function Home() {
     // const [modalShow, setModalShow] = React.useState(false);
     return (
         <div>
-            <div className="container-fluid">
+            <div className="mx-24">
                 <div className="container-fluid" style={{ marginBottom: '40px' }}>
                     <Carousel style={{ marginTop: '100px' }}>
                         {
@@ -81,10 +81,13 @@ function Home() {
                                                 <Card.Text>
                                                     {text}
                                                 </Card.Text>
-                                                <Button variant="primary" onClick={() => {
-                                                    setModalShow(true);
-                                                    setContext(prev=>{return{...prev,cart:[...prev.cart,item]}})
-                                                }}>Add to Cart</Button>
+                                                {
+                                                    context.loggedIn &&
+                                                    <Button variant="primary" onClick={() => {
+                                                        setModalShow(true);
+                                                        setContext(prev=>{return{...prev,cart:[...prev.cart,item]}})
+                                                    }}>Add to Cart</Button>
+                                                }
                                                 <MyVerticallyCenteredModal
                                                     show={modalShow}
                                                     onHide={() => setModalShow(false)}
@@ -111,10 +114,13 @@ function Home() {
                                                 <Card.Text>
                                                     {item.text}
                                                 </Card.Text>
-                                                <Button variant="primary" onClick={() => {
-                                                    setModalShow(true);
-                                                    setContext(prev=>{return{...prev,cart:[...prev.cart,item]}})
-                                                }}>Add to Cart</Button>
+                                                {
+                                                    context.loggedIn &&
+                                                    <Button variant="primary" onClick={() => {
+                                                        setModalShow(true);
+                                                        setContext(prev=>{return{...prev,cart:[...prev.cart,item]}})
+                                                    }}>Add to Cart</Button>
+                                                }
                                                 <MyVerticallyCenteredModal
                                                     show={modalShow}
                                                     onHide={() => setModalShow(false)}

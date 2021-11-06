@@ -41,7 +41,7 @@ function Cart() {
                         }
                     </div>
                     <div className="flex-1 flex flex-col items-center mx-10">
-                        <div className="flex flex-col justify-center rounded-xl shadow-sm px-8 border rounded-xl w-full items-center">
+                        <div className="flex flex-col justify-center rounded-xl mb-32 shadow-sm px-8 border rounded-xl w-full items-center">
                             <h3 className="m-4">Items</h3>
                             <div className="flex justify-between text-lg font-medium w-full mb-4">
                                 <div className="w-56">Cart Items</div>
