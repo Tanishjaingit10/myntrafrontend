@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useContext, useEffect, useState } from 'react'
 import { BACKEND } from '../../Keys';
 import { Carousel, Card, Button, Row, Col, Modal } from "react-bootstrap";
+import {FaTrophy, FaMedal} from 'react-icons/fa'
 import Footer from "../Footer"
 import Data from "./Data"
 import { appContext } from '../../Store/Context';
@@ -129,14 +130,17 @@ function Home() {
                 {
                     top3.length>2 &&
                     <>
-                        <h2 style={{ marginLeft: '10px' }}>Star of the Week</h2>
+                        <h2 style={{ marginLeft: '10px' }}>Stars of the Week</h2>
                         <div className="container-fluid" style={{ marginTop: '10px', marginBottom: '40px' }}>
                             <Row xs={1} md={2} className="g-4" style={{ marginTop: '20px' }}>
                                 <Col style={{ margin: 'auto' }}>
                                     <Card>
                                         <Card.Body>
                                             <Card.Title className="text-lg text-center m-8 text-gray-700 font-bold">Winner</Card.Title>
-                                            <Card.Text className="text-lg text-center m-8 text-gray-700 font-bold">
+                                            <div style={{display: "flex", justifyContent: "center"}}>
+                                                <FaTrophy size="2em"/>
+                                            </div>
+                                            <Card.Text className="text-lg text-center m-8 mt-0 text-gray-700 font-bold">
                                                 {top3[0].name}<br/>
                                                 {top3[0].coins}
                                             </Card.Text>
@@ -149,7 +153,10 @@ function Home() {
                                     <Card>
                                         <Card.Body>
                                             <Card.Title className="text-lg text-center m-8 text-gray-700 font-bold">Second</Card.Title>
-                                            <Card.Text className="text-lg text-center m-8 text-gray-700 font-bold">
+                                            <div style={{display: "flex", justifyContent: "center"}}>
+                                                <FaMedal size="2em"/>
+                                            </div>
+                                            <Card.Text className="text-lg text-center m-8 mt-0 text-gray-700 font-bold">
                                                 {top3[1].name}<br/>
                                                 {top3[1].coins}
                                             </Card.Text>
@@ -160,7 +167,10 @@ function Home() {
                                     <Card>
                                         <Card.Body>
                                             <Card.Title className="text-lg text-center m-8 text-gray-700 font-bold">Third</Card.Title>
-                                            <Card.Text className="text-lg text-center m-8 text-gray-700 font-bold">
+                                            <div style={{display: "flex", justifyContent: "center"}}>
+                                                <FaMedal size="2em"/>
+                                            </div>
+                                            <Card.Text className="text-lg text-center m-8 mt-0 text-gray-700 font-bold">
                                                 {top3[2].name}<br/>
                                                 {top3[2].coins}
                                             </Card.Text>

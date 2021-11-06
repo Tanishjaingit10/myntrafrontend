@@ -5,39 +5,48 @@ import "./games.css"
 function Games() {
     const questions = [
         {
-            questionText: 'What is the capital of France?',
+            questionText: 'Where is the head office of Myntra ?',
             answerOptions: [
-                { answerText: 'New York', isCorrect: false },
-                { answerText: 'London', isCorrect: false },
-                { answerText: 'Paris', isCorrect: true },
-                { answerText: 'Dublin', isCorrect: false },
+                { answerText: 'Kolkata', isCorrect: false },
+                { answerText: 'Pune', isCorrect: false },
+                { answerText: 'Bengaluru', isCorrect: true },
+                { answerText: 'New Delhi', isCorrect: false },
             ],
         },
         {
-            questionText: 'Who is CEO of Tesla?',
+            questionText: 'Who is the current CEO of Myntra?',
             answerOptions: [
+                { answerText: 'Kalyan Krishnamurthy', isCorrect: false },
+                { answerText: 'Amar Nagaram', isCorrect: true },
                 { answerText: 'Jeff Bezos', isCorrect: false },
-                { answerText: 'Elon Musk', isCorrect: true },
-                { answerText: 'Bill Gates', isCorrect: false },
-                { answerText: 'Tony Stark', isCorrect: false },
+                { answerText: 'Mukesh Bansal', isCorrect: false },
             ],
         },
         {
-            questionText: 'The iPhone was created by which company?',
+            questionText: 'When was Myntra founded?',
             answerOptions: [
-                { answerText: 'Apple', isCorrect: true },
-                { answerText: 'Intel', isCorrect: false },
+                { answerText: '2007', isCorrect: true },
+                { answerText: '2004', isCorrect: false },
+                { answerText: '2005', isCorrect: false },
+                { answerText: '2006', isCorrect: false },
+            ],
+        },
+        {
+            questionText: 'Who is the founder of Myntra?',
+            answerOptions: [
+                { answerText: 'Kalyan Krishnamurthy', isCorrect: false },
+                { answerText: 'Jeff Bezos', isCorrect: false },
+                { answerText: 'Amar Nagaram', isCorrect: false },
+                { answerText: 'Mukesh Bansal', isCorrect: true },
+            ],
+        },
+        {
+            questionText: 'Which of the following company acquired Myntra in 2014?',
+            answerOptions: [
+                { answerText: 'Facebook', isCorrect: false },
+                { answerText: 'Snapdeal', isCorrect: false },
                 { answerText: 'Amazon', isCorrect: false },
-                { answerText: 'Microsoft', isCorrect: false },
-            ],
-        },
-        {
-            questionText: 'How many Harry Potter books are there?',
-            answerOptions: [
-                { answerText: '1', isCorrect: false },
-                { answerText: '4', isCorrect: false },
-                { answerText: '6', isCorrect: false },
-                { answerText: '7', isCorrect: true },
+                { answerText: 'Flipkart', isCorrect: true },
             ],
         },
     ];
