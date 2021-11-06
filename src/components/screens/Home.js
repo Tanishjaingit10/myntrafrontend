@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { BACKEND } from '../../Keys';
 import { Carousel, Card, Button, Row, Col, Modal } from "react-bootstrap";
-import {FaTrophy, FaMedal} from 'react-icons/fa'
+import {FaTrophy, FaStar} from 'react-icons/fa'
 import Footer from "../Footer"
 import Data from "./Data"
 
@@ -128,7 +128,12 @@ function Home() {
                 {
                     top3.length>2 &&
                     <>
-                        <h2 style={{ marginLeft: '10px' }}>Stars of the Week</h2>
+                        <div className="row">
+                            <div className="col-12 text-center">
+                                <h2><b>Stars of the Week</b></h2>
+                            </div>                            
+                        </div>
+                        
                         <div className="container-fluid" style={{ marginTop: '10px', marginBottom: '40px' }}>
                             <Row xs={1} md={2} className="g-4" style={{ marginTop: '20px' }}>
                                 <Col style={{ margin: 'auto' }}>
@@ -136,7 +141,7 @@ function Home() {
                                         <Card.Body>
                                             <Card.Title className="text-lg text-center m-8 text-gray-700 font-bold">Winner</Card.Title>
                                             <div style={{display: "flex", justifyContent: "center"}}>
-                                                <FaTrophy size="2em"/>
+                                                <FaTrophy size="2em" color="#FFD700"/>
                                             </div>
                                             <Card.Text className="text-lg text-center m-8 mt-0 text-gray-700 font-bold">
                                                 {top3[0].name}<br/>
@@ -152,7 +157,7 @@ function Home() {
                                         <Card.Body>
                                             <Card.Title className="text-lg text-center m-8 text-gray-700 font-bold">Second</Card.Title>
                                             <div style={{display: "flex", justifyContent: "center"}}>
-                                                <FaMedal size="2em"/>
+                                                <FaTrophy size="2em" color="#C0C0C0"/>
                                             </div>
                                             <Card.Text className="text-lg text-center m-8 mt-0 text-gray-700 font-bold">
                                                 {top3[1].name}<br/>
@@ -166,7 +171,7 @@ function Home() {
                                         <Card.Body>
                                             <Card.Title className="text-lg text-center m-8 text-gray-700 font-bold">Third</Card.Title>
                                             <div style={{display: "flex", justifyContent: "center"}}>
-                                                <FaMedal size="2em"/>
+                                                <FaTrophy size="2em" color="#b08d57" />
                                             </div>
                                             <Card.Text className="text-lg text-center m-8 mt-0 text-gray-700 font-bold">
                                                 {top3[2].name}<br/>
