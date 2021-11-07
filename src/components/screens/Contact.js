@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Footer from "../Footer"
 import { Button, Modal } from "react-bootstrap";
 import { Link } from 'react-router-dom'
+import axios from 'axios';
+import { BACKEND } from '../../Keys';
+import { appContext } from '../../Store/Context';
 
 function MyVerticallyCenteredModal(props) {
     return (
@@ -24,11 +27,19 @@ function MyVerticallyCenteredModal(props) {
         </Modal>
     );
 }
+
 function Contact() {
     const [modalShow, setModalShow] = React.useState(false);
+    const [context,setContext] = useContext(appContext)
     const onSubmit = (e) => {
         e.preventDefault()
-        setModalShow(true);
+        let config = {
+            headers: {
+                'Authorization': `Bearer ${context?.token}`
+            }
+        }
+        axios.get(`${BACKEND}/getFeedbackCoins`,config)
+        .then(res=>{console.log(res);setModalShow(true)})
     }
     
     return (

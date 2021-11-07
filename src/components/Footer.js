@@ -7,10 +7,10 @@ const Footer = () => {
         <footer className="footer">
             <div className="container">
                 <div className="row">
-                    <div className="col-12 col-sm-6  links">
+                    <div className="col-12 col-sm-6 mb-4 sm:mb-0 links">
                         <h5>Useful Links</h5>
                         <br/>
-                        <ul className="list-unstyled d-sm-flex justify-content-center">
+                        <ul className="flex justify-content-center">
                             <li><Link to="/games" className="btn btn-lg"><FaGamepad/></Link></li>
                             <li><Link to="/profile" className="btn btn-lg"><FaUser /></Link></li>
                             <li><Link to="/cart" className="btn btn-lg"><FaShoppingCart /></Link></li>
@@ -20,7 +20,7 @@ const Footer = () => {
                     <div className="col-12 col-sm-6 social">
                         <h5>Keep In Touch</h5>
                         <br/>
-                        <ul className="list-unstyled d-sm-flex justify-content-center">
+                        <ul className="flex justify-content-center">
                             <li><a className="btn btn-facebook btn-lg" rel="noreferrer" href="https://www.facebook.com/myntra" target="_blank"><FaFacebook /></a></li>
                             <li><a className="btn btn-twitter btn-lg" rel="noreferrer" href="https://twitter.com/myntra" target="_blank"><FaTwitter /></a></li>
                             <li><a className="btn btn-google btn-lg" rel="noreferrer" href="https://www.youtube.com/c/myntra" target="_blank"><FaYoutube /></a></li>

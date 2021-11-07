@@ -28,6 +28,38 @@ function MyVerticallyCenteredModal(props) {
     );
 }
 
+function CardComponent({item}){
+    const [modalShow, setModalShow] = useState(false);
+    const [context,setContext] = useContext(appContext)
+    const price=item.price;
+    const text=item.text;
+    const image=item.image;
+    return (
+        <Col>
+            <Card>
+                <Card.Img variant="top" src={image} />
+                <Card.Body>
+                    <Card.Title>Rs. {price}</Card.Title>
+                    <Card.Text>
+                        {text}
+                    </Card.Text>
+                    {
+                        context.loggedIn &&
+                        <Button variant="primary" onClick={() => {
+                            setModalShow(true);
+                            setContext(prev=>{return{...prev,cart:[...prev.cart,item]}})
+                        }}>Add to Cart</Button>
+                    }
+                    <MyVerticallyCenteredModal
+                        show={modalShow}
+                        onHide={() => setModalShow(false)}
+                    />
+                </Card.Body>
+            </Card>
+        </Col>
+    )
+}
+
 function Home() {
     // wake call to backend
     const [top3, setTop3] = useState([])
@@ -40,12 +72,12 @@ function Home() {
         })
         .catch(err=>console.log(err))
     }, [])
-    const [modalShow, setModalShow] = React.useState(false);
+    const [modalShow, setModalShow] = useState(false);
 
     // const [modalShow, setModalShow] = React.useState(false);
     return (
         <div>
-            <div className="mx-24">
+            <div className="md:mx-10 lg:mx-24">
                 <div className="container-fluid" style={{ marginBottom: '40px' }}>
                     <Carousel style={{ marginTop: '100px' }}>
                         {
@@ -66,37 +98,9 @@ function Home() {
                 </div>
                 <h2 style={{ marginLeft: '10px' }}>Women collection</h2>
                 <div className="container-fluid" style={{ marginTop: '10px', marginBottom: '40px' }}>
-                    <Row xs={2} md={4} className="g-4">
+                    <Row xs={2} sm={3} lg={4} className="g-4">
                         {
-                            Data["women-images"].map(item => {
-                                const price=item.price;
-                                const text=item.text;
-                                const image=item.image;
-                                return (
-                                    <Col>
-                                        <Card>
-                                            <Card.Img variant="top" src={image} />
-                                            <Card.Body>
-                                                <Card.Title>Rs. {price}</Card.Title>
-                                                <Card.Text>
-                                                    {text}
-                                                </Card.Text>
-                                                {
-                                                    context.loggedIn &&
-                                                    <Button variant="primary" onClick={() => {
-                                                        setModalShow(true);
-                                                        setContext(prev=>{return{...prev,cart:[...prev.cart,item]}})
-                                                    }}>Add to Cart</Button>
-                                                }
-                                                <MyVerticallyCenteredModal
-                                                    show={modalShow}
-                                                    onHide={() => setModalShow(false)}
-                                                />
-                                            </Card.Body>
-                                        </Card>
-                                    </Col>
-                                )
-                            })
+                            Data["women-images"].map(item =><CardComponent item={item}/>)
                         }
                     </Row>
                 </div>
@@ -104,32 +108,7 @@ function Home() {
                 <div className="container-fluid" style={{ marginTop: '10px', marginBottom: '40px' }}>
                     <Row xs={2} md={4} className="g-4">
                         {
-                            Data["men-images"].map(item => {
-                                return (
-                                    <Col>
-                                        <Card>
-                                            <Card.Img variant="top" src={item.image} />
-                                            <Card.Body>
-                                                <Card.Title>Rs. {item.price}</Card.Title>
-                                                <Card.Text>
-                                                    {item.text}
-                                                </Card.Text>
-                                                {
-                                                    context.loggedIn &&
-                                                    <Button variant="primary" onClick={() => {
-                                                        setModalShow(true);
-                                                        setContext(prev=>{return{...prev,cart:[...prev.cart,item]}})
-                                                    }}>Add to Cart</Button>
-                                                }
-                                                <MyVerticallyCenteredModal
-                                                    show={modalShow}
-                                                    onHide={() => setModalShow(false)}
-                                                />
-                                            </Card.Body>
-                                        </Card>
-                                    </Col>
-                                )
-                            })
+                            Data["men-images"].map(item => <CardComponent item={item}/>)
                         }
                     </Row>
                 </div>

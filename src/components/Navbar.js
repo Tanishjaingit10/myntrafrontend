@@ -20,7 +20,11 @@ export const Navbar = () => {
                     <>
                         <Link to="/games" className="flex items-center justify-center text-lg m-8 text-gray-700 font-bold no-underline hover:text-pink-500"><div>Games</div></Link>
                         <Link to="/profile" className="flex items-center justify-center text-lg m-8 text-gray-700 font-bold no-underline hover:text-pink-500"><div>Profile</div></Link>
-                        <Link to="/cart" className="flex items-center justify-center text-lg m-8 text-gray-700 font-bold no-underline hover:text-pink-500"><div>Cart</div></Link>
+                        <Link to="/cart" className="flex items-center justify-center text-lg m-8 text-gray-700 font-bold no-underline hover:text-pink-500">
+                            <div className="relative">
+                                Cart
+                                {context?.cart && context.cart.length >0 && <div className="absolute text-xs text-white font-normal h-4 text-center top-0 right-0 transform translate-x-full w-4 bg-red-500 rounded-full">{context.cart.length}</div>}
+                            </div></Link>
                         <Link to="/contact" className="flex items-center justify-center text-lg m-8 text-gray-700 font-bold no-underline hover:text-pink-500"><div>Contact</div></Link>
                         <button onClick={logout} className="flex items-center justify-center text-lg m-8 text-gray-700 font-bold no-underline hover:text-pink-500"><div>Logout</div></button>
                     </>
