@@ -60,15 +60,14 @@ function Profile() {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="1">
-                                <Accordion.Header>Learn how to earn Myntra coins</Accordion.Header>
+                                <Accordion.Header>Learn how to earn Myntra coins & get a chance to be featured on Myntra </Accordion.Header>
                                 <Accordion.Body>
                                     1) First time SignUp into Myntra - <b>100 coins</b><br/>
                                     2) Ask your friends to use your referral code to sign up into Myntra - <b>100 coins</b><br/>
-                                    3) Daily Login using your account - <b>10 coins</b><br />
-                                    4) Submit your feedback regarding products, features, etc - <b>10 coins</b><br/>
-                                    5) Playing daily quizzes on games page - <b>4 coins</b> per correct answer<br/>                 
-                                    6) Stars of the Week - <b>50 bonus coins</b><br/>
-                                    7) Purchasing product - <b>10% bonus coins</b> of total price<br/>
+                                    3) Submit your feedback regarding products, features, etc - <b>10 coins</b><br/>
+                                    4) Playing daily quizzes on games page - <b>4 coins</b> per correct answer<br/>                 
+                                    5) Stars of the Week - <b>50 bonus coins</b><br/>
+                                    6) Purchasing product - <b>10% bonus coins</b> of total price<br/>
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>

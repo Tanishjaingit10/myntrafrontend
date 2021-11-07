@@ -61,7 +61,7 @@ function Cart() {
                                         const text=item.text;
                                         const image=item.image;
                                         return (
-                                            <Card>
+                                            <Card className="shadow-xl">
                                                 <Card.Img variant="top" src={image} />
                                                 <Card.Body>
                                                     <Card.Title>Rs. {price}</Card.Title>
