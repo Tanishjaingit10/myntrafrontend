@@ -36,9 +36,9 @@ function Profile() {
                         </div>
                         <div className="col-md-8">
                             <div className="card-body flex items-center justify-center flex-col">
-                                <h5 className="text-center">{context.user?.name}</h5>
-                                <p className="card-text text-gray-500 text-bold">{context.user?.email}</p>
-                                <p className="card-text flex items-center w-40 justify-around"><b>Referral: </b>{context.user?.referral} <button onClick={copyReff}><FiCopy/></button></p>
+                                <div className="text-center m-2 text-2xl font-semibold">{context.user?.name}</div>
+                                <div className="card-text text-gray-500 text-bold">{context.user?.email}</div>
+                                <div className="card-text m-2 flex items-center w-40 justify-around"><b>Referral: </b>{context.user?.referral} <button onClick={copyReff}><FiCopy/></button></div>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@ function Profile() {
                 <div className="border mb-5 shadow-md rounded-lg" style={{ maxWidth: '500px', margin: 'auto' }}>
                     <h5 className="card-header text-center"><span className="text-xl font-bold text-pink-500">Myntra Coins</span></h5>
                     <div className="card-body">
-                        <h5 className="card-title mb-4 text-center">Total number of myntra coins earned - <span className="text-pink-500">{context.user?.coins}</span></h5>
+                        <div className="card-title text-xl font-semibold mb-4 text-center">Total number of myntra coins earned - <span className="text-pink-500">{context.user?.coins}</span></div>
 
                         <Accordion >
                             <Accordion.Item eventKey="0">

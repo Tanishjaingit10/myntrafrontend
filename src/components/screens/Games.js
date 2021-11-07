@@ -69,13 +69,13 @@ function Games() {
     return (
         <div>
             <div className="mt-32 flex items-center flex-col">
-                <h2 className="text-center mb-5">Daily Quiz</h2>
-                <div className="p-2 md:p-8 text-white w-11/12 sm:w-2/3 lg:w-1/2 flex rounded-2xl overflow-hidden shadow-lg mb-5" style={{ background:"#414e7c" }}>
+                <div className="text-3xl font-semibold text-center mb-5">Daily Quiz</div>
+                <div className="p-6 text-white w-11/12 sm:w-2/3 lg:w-1/2 flex rounded-2xl overflow-hidden shadow-lg mb-5" style={{ background:"#414e7c" }}>
                     {showScore ? (
                         <div className='score-section flex flex-col w-full items-center justify-center'>
-                            <h2 className="mb-8 mt-2">CONGRATULATIONS!</h2>
-                            <p>You scored {score} out of {questions.length}</p>
-                            <p>Coins earned: {4*score}</p>
+                            <div className="mb-8 text-3xl font-semibold mt-2">CONGRATULATIONS!</div>
+                            <p className="text-xl">You scored {score} out of {questions.length}</p>
+                            <p className="text-xl">Coins earned: {4*score}</p>
                         </div>
                     ) : (
                         <div className="flex flex-col md:flex-row w-full items-center justify-center">

@@ -15,7 +15,7 @@ function MyVerticallyCenteredModal(props) {
             centered
         >
             <Modal.Body>
-                <h4 className="text-center m-8 text-gray-700 font-bold">Woohoo!!</h4>
+                <div className="text-center m-8 text-gray-700 text-3xl font-semibold">Woohoo!!</div>
                 <p className="text-lg text-center m-8 text-gray-700 font-bold">
                     Feedback submitted successfully <br />
                     <span className="text-red-500">Congrats!! You have earned 10 Myntra Coins.</span>
@@ -39,21 +39,21 @@ function Contact() {
             }
         }
         axios.get(`${BACKEND}/getFeedbackCoins`,config)
-        .then(res=>{console.log(res);setModalShow(true)})
+        .then(res=>{setModalShow(true)})
     }
     
     return (
         <div>
-            <div className="container">
+            <div className="px-20">
                 <div className="row" style={{ marginTop: '100px' }}>
                     <div className="col-12">
-                        <h3 className="">Contact Us</h3>
+                        <div className="text-3xl font-semibold">Contact Us</div>
                         <hr />
                     </div>
                 </div>
                 <div className="row row-content align-items-center">
                     <div className="col-12 col-sm-6 offset-sm-1">
-                        <h5>Registered Office Address</h5>
+                        <div className="text-xl font-semibold">Registered Office Address</div>
                         <address style={{ fontSize: '100%' }}>
                             Buildings Alyssa,<br />
                             Begonia and Clover situated in Embassy Tech Village,<br />
@@ -70,7 +70,7 @@ function Contact() {
                 </div>
                 <div className="row row-content overflow-x-hidden">
                     <div className="col-12 offset-md-1">
-                        <h3>Send us your Feedback</h3>
+                        <div className="text-3xl font-semibold">Send us your Feedback</div>
                         <br />
                     </div>
                     <div className="col-12 col-md-9 offset-md-1">

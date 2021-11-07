@@ -120,7 +120,7 @@ function Cart() {
                 </div>
                 :
                 <div className="h-screen flex flex-col justify-center items-center">
-                    <h2>You cart is empty!</h2>
+                    <div className="text-3xl font-semibold">You cart is empty!</div>
                     <Link to="/" className="text-center no-underline hover:bg-pink-400 my-4 border rounded-lg text-xl text-white bg-pink-500 p-2">Shop Items</Link>
                 </div>
             }

@@ -91,7 +91,7 @@ function Home() {
                         }
                     </Carousel>
                 </div>
-                <h2 style={{ marginLeft: '10px' }}>Women collection</h2>
+                <div style={{ marginLeft: '10px' }} className="text-3xl font-semibold">Women collection</div>
                 <div className="container-fluid" style={{ marginTop: '10px', marginBottom: '40px' }}>
                     <Row xs={2} sm={3} lg={4} className="g-4">
                         {
@@ -99,7 +99,7 @@ function Home() {
                         }
                     </Row>
                 </div>
-                <h2 style={{ marginLeft: '10px' }}>Men collection</h2>
+                <div style={{ marginLeft: '10px' }} className="text-3xl font-semibold">Men collection</div>
                 <div className="container-fluid" style={{ marginTop: '10px', marginBottom: '40px' }}>
                     <Row xs={2} md={4} className="g-4">
                         {
@@ -112,7 +112,7 @@ function Home() {
                     <>
                         <div className="row">
                             <div className="col-12 text-center">
-                                <h2><b>Stars of the Week</b></h2>
+                                <div className="text-3xl font-semibold">Stars of the Week</div>
                             </div>                            
                         </div>
                         
