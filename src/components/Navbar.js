@@ -19,7 +19,7 @@ export const Navbar = () => {
 
     return (
         <div className="flex absolute justify-between h-20 z-10 w-full bg-gray-50 shadow-md" style={{ position: 'fixed', top: '0px' }}>
-            <Link to="/" className="flex items-center justify-start w-2/12 text-xl text-gray-700 font-bold no-underline text-pink-500 hover:underline hover:text-pink-500 ml-6"><div>Myntra</div></Link>
+            <Link to="/" className="flex md:pl-10 lg:pl-16 items-center justify-start w-2/12 text-xl text-gray-700 font-bold no-underline text-pink-500 hover:underline hover:text-pink-500 ml-6"><div>Myntra</div></Link>
             <div className="flex ">
                 {
                     loggedIn ?
@@ -57,8 +57,8 @@ export const Navbar = () => {
                         </>
                         :
                         <>
-                            <Link to="/signin" className="menu-link1 flex items-center justify-center text-lg m-8 text-gray-700 font-bold no-underline hover:text-pink-500"><div>Login</div></Link>
-                            <Link to="/signup" className="menu-link1 flex items-center justify-center text-lg m-8 text-gray-700 font-bold no-underline hover:text-pink-500"><div>Signup</div></Link>
+                            <Link to="/signin" className="menu-link1 flex items-center justify-center text-lg m-8 text-gray-700 font-semibold no-underline hover:text-pink-500"><div>Login</div></Link>
+                            <Link to="/signup" className="menu-link1 flex items-center justify-center text-lg m-8 text-gray-700 font-semibold no-underline hover:text-pink-500"><div>Signup</div></Link>
 
                             <div className="hamburger-menu1">
                                 <button onClick={() => setShowMediaIcons(!showMediaIcons)}>

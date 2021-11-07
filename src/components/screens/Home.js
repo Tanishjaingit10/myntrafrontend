@@ -127,7 +127,7 @@ function Home() {
                                             </div>
                                             <Card.Text className="text-lg text-center m-8 mt-0 text-gray-700 font-bold">
                                                 {top3[0].name}<br/>
-                                                {top3[0].coins}
+                                                <span className="font-semibold">Coins: {top3[0].coins}</span>
                                             </Card.Text>
                                         </Card.Body>
                                     </Card>
@@ -143,7 +143,7 @@ function Home() {
                                             </div>
                                             <Card.Text className="text-lg text-center m-8 mt-0 text-gray-700 font-bold">
                                                 {top3[1].name}<br/>
-                                                {top3[1].coins}
+                                                <span className="font-semibold">Coins: {top3[1].coins}</span>
                                             </Card.Text>
                                         </Card.Body>
                                     </Card>
@@ -157,7 +157,7 @@ function Home() {
                                             </div>
                                             <Card.Text className="text-lg text-center m-8 mt-0 text-gray-700 font-bold">
                                                 {top3[2].name}<br/>
-                                                {top3[2].coins}
+                                                <span className="font-semibold">Coins: {top3[2].coins}</span>
                                             </Card.Text>
                                         </Card.Body>
                                     </Card>
