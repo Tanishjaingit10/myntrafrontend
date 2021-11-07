@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useContext, useEffect, useState } from 'react'
 import { BACKEND } from '../../Keys';
 import { Carousel, Card, Button, Row, Col, Modal } from "react-bootstrap";
-import {FaTrophy, FaStar} from 'react-icons/fa'
+import { FaTrophy } from 'react-icons/fa'
 import Footer from "../Footer"
 import Data from "./Data"
 import { appContext } from '../../Store/Context';

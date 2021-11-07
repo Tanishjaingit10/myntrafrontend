@@ -7,12 +7,22 @@ import { BACKEND } from '../../Keys'
 import { appContext } from '../../Store/Context'
 import Referral from './Referral'
 
+import TextField from "@mui/material/TextField";
+import IconButton from "@mui/material/IconButton";
+import FilledInput from "@mui/material/FilledInput";
+import InputLabel from "@mui/material/InputLabel";
+import InputAdornment from "@mui/material/InputAdornment";
+import FormControl from "@mui/material/FormControl";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
+
 function Signup() {
     const {setContext} = useContext(appContext)
     const [reff,setReff] = useState(false)
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [showPassword, setShowPassword] = useState(false);
 
     const signupHandler = (event)=>{
         event.preventDefault()
@@ -42,12 +52,49 @@ function Signup() {
                 <h1 className="mb-2 text-3xl p-3 text-pink-500"> Sign up </h1>
                 <div className="w-11/12 sm:w-5/6 md:3/4 lg:w-2/3 xl:w-1/2 flex flex-col items-center">
                     <form className="w-full flex flex-col " onSubmit={(e)=>signupHandler(e)}>
-                        <label htmlFor="name">Name</label>
-                        <input id="name" onChange={e=>setName(e.target.value)} className="border shadow-sm mb-4 p-1 w-full rounded text-black px-2" required/>
-                        <label htmlFor="email">Email</label>
-                        <input type="email" id="email" onChange={e=>setEmail(e.target.value)} className="border shadow-sm mb-4 p-1 w-full rounded text-black px-2" required/>
-                        <label htmlFor="password">Password</label>
-                        <input type="password" id="password" onChange={e=>setPassword(e.target.value)} className="border shadow-sm mb-4 p-1 w-full rounded text-black px-2" required/>
+                        <TextField
+                        label="Name"
+                        id="filled-size-small"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        variant="filled"
+                        size="small"
+                        type="text"
+                        className="my-3"
+                        required
+                        />
+                        <TextField
+                        label="Email"
+                        id="filled-size-small"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        variant="filled"
+                        size="small"
+                        type="email"
+                        className="my-3"
+                        required
+                        />
+                        <FormControl variant="filled" className="my-3 mb-4">
+                        <InputLabel htmlFor="password">Password</InputLabel>
+                        <FilledInput
+                            required
+                            id="password"
+                            type={showPassword ? "text" : "password"}
+                            value={password}
+                            size="small"
+                            onChange={(e) => setPassword(e.target.value)}
+                            endAdornment={
+                            <InputAdornment position="end">
+                                <IconButton
+                                onClick={() => setShowPassword((p) => !p)}
+                                edge="end"
+                                >
+                                {showPassword ? <VisibilityOff /> : <Visibility />}
+                                </IconButton>
+                            </InputAdornment>
+                            }
+                        />
+                        </FormControl>
                         <button type="submit" className="w-full shadow-sm rounded my-3 p-2 font-bold bg-blue-500 text-white">Signup</button>
                     </form>
                     <GoogleLogin
