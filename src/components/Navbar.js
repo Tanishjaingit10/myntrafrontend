@@ -14,7 +14,7 @@ export const Navbar = () => {
 
     const logout = () => {
         reducer.clear()
-        setShowMediaIcons(!showMediaIcons)
+        setShowMediaIcons(false)
     }
 
     return (
