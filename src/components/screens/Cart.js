@@ -30,7 +30,7 @@ function MyVerticallyCenteredModal(props) {
 
 function Cart() {
     
-    const [context,setContext] = useContext(appContext)
+    const {context,setContext} = useContext(appContext)
     const [modalShow, setModalShow] = useState(false);
 
     function Checkout(){

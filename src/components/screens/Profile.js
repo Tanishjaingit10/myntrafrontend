@@ -8,7 +8,7 @@ import { BACKEND } from '../../Keys';
 import {FiCopy}  from 'react-icons/fi'
 
 function Profile() {
-    const [context, setContext] = useContext(appContext)
+    const {context, setContext} = useContext(appContext)
 
     useEffect(() => {
         let config = {

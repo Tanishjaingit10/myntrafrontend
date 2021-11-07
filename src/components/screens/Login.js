@@ -7,7 +7,7 @@ import axios from 'axios'
 import { appContext } from '../../Store/Context'
 
 function Login() {
-    const [context,setContext] = useContext(appContext)
+    const {setContext} = useContext(appContext)
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 

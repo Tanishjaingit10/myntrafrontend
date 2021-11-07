@@ -7,7 +7,7 @@ import { Redirect } from 'react-router-dom'
 
 function Referral() {
 
-    const [context] = useContext(appContext)
+    const {context} = useContext(appContext)
     const [reff,setReff] = useState(false)
     const [referral, setReferral] = React.useState("")
     

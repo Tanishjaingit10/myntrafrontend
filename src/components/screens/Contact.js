@@ -30,7 +30,7 @@ function MyVerticallyCenteredModal(props) {
 
 function Contact() {
     const [modalShow, setModalShow] = React.useState(false);
-    const [context,setContext] = useContext(appContext)
+    const {context} = useContext(appContext)
     const onSubmit = (e) => {
         e.preventDefault()
         let config = {

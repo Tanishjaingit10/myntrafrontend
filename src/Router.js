@@ -15,7 +15,7 @@ import { appContext } from './Store/Context'
 
 function Router() {
 
-    const [context,setContext] = useContext(appContext)
+    const {context} = useContext(appContext)
     const loggedIn = context.loggedIn
     
     return (

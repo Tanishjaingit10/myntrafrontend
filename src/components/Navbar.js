@@ -4,11 +4,11 @@ import { appContext } from '../Store/Context'
 
 export const Navbar = () => {
 
-    const [context,setContext] = useContext(appContext)
+    const {context,reducer} = useContext(appContext)
     const loggedIn = context.loggedIn
 
     const logout = () => {
-        setContext(prev=>{return{...prev,loggedIn:false,token:""}})
+        reducer.clear()
     }
     
     return (

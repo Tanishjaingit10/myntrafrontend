@@ -30,7 +30,7 @@ function MyVerticallyCenteredModal(props) {
 
 function CardComponent({item}){
     const [modalShow, setModalShow] = useState(false);
-    const [context,setContext] = useContext(appContext)
+    const {context,setContext} = useContext(appContext)
     const price=item.price;
     const text=item.text;
     const image=item.image;
@@ -61,20 +61,15 @@ function CardComponent({item}){
 }
 
 function Home() {
-    // wake call to backend
     const [top3, setTop3] = useState([])
-    const [context,setContext] = useContext(appContext)  
     useEffect(() => {
-        axios.get(`${BACKEND}`)
         axios.get(`${BACKEND}/stars`)
         .then(res => {
             setTop3(res.data)
         })
         .catch(err=>console.log(err))
     }, [])
-    const [modalShow, setModalShow] = useState(false);
 
-    // const [modalShow, setModalShow] = React.useState(false);
     return (
         <div>
             <div className="md:mx-10 lg:mx-24">

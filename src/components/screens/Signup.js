@@ -8,7 +8,7 @@ import { appContext } from '../../Store/Context'
 import Referral from './Referral'
 
 function Signup() {
-    const [context,setContext] = useContext(appContext)
+    const {setContext} = useContext(appContext)
     const [reff,setReff] = useState(false)
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
