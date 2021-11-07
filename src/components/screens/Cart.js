@@ -51,7 +51,7 @@ function Cart() {
             />
             {
                 context.cart.length > 0?
-                <div className="flex mt-24 mb-40 flex-col lg:flex-row w-5/6 justify-between">
+                <div className="flex mt-24 mb-20 flex-col lg:flex-row w-5/6 justify-between">
                     <div className="lg:w-2/3 mb-20 flex flex-row">
                         {
                             <div className="grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 grid gap-4">
@@ -61,7 +61,7 @@ function Cart() {
                                         const text=item.text;
                                         const image=item.image;
                                         return (
-                                            <Card>
+                                            <Card className="shadow-md">
                                                 <Card.Img variant="top" src={image} />
                                                 <Card.Body>
                                                     <Card.Title>Rs. {price}</Card.Title>
@@ -78,7 +78,7 @@ function Cart() {
                         }
                     </div>
                     <div className="flex-1 flex flex-col items-center sm:mx-10">
-                        <div className="flex flex-col justify-center rounded-xl mb-32 shadow-sm px-8 border rounded-xl w-full items-center">
+                        <div className="flex flex-col justify-center rounded-xl lg:mb-32 shadow-sm px-8 border rounded-xl w-full items-center">
                             <h3 className="m-4">Items</h3>
                             <div className="flex justify-between text-lg font-medium w-full mb-4">
                                 <div className="w-56">Cart Items</div>

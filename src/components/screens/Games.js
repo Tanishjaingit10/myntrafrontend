@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Footer from "../Footer"
-import "./games.css"
 
 function Games() {
     const questions = [
@@ -69,9 +68,9 @@ function Games() {
     };
     return (
         <div>
-            <div style={{ marginTop: '120px' }}>
+            <div className="mt-32 flex items-center flex-col">
                 <h2 className="text-center mb-5">Daily Quiz</h2>
-                <div className="app w-1/2 flex h-80 rounded-2xl p-8 overflow-hidden shadow-lg mb-5" style={{ margin: 'auto' }}>
+                <div className="p-2 md:p-8 text-white w-11/12 sm:w-2/3 lg:w-1/2 flex rounded-2xl overflow-hidden shadow-lg mb-5" style={{ background:"#414e7c" }}>
                     {showScore ? (
                         <div className='score-section flex flex-col w-full items-center justify-center'>
                             <h2 className="mb-8 mt-2">CONGRATULATIONS!</h2>
@@ -79,19 +78,17 @@ function Games() {
                             <p>Coins earned: {4*score}</p>
                         </div>
                     ) : (
-                        <>
-                            <div className='question-section'>
-                                <div className='question-count'>
-                                    <span>Question {currentQuestion + 1}</span>/{questions.length}
-                                </div>
-                                <div className='question-text'>{questions[currentQuestion].questionText}</div>
+                        <div className="flex flex-col md:flex-row w-full items-center justify-center">
+                            <div className='h-full p-2 my-2 w-full'>
+                                <span className="text-3xl">Question {currentQuestion + 1}</span>/{questions.length}
+                                <div className='my-4'>{questions[currentQuestion].questionText}</div>
                             </div>
-                            <div className='answer-section'>
+                            <div className='grid grid-cols-1 mb-2 w-full'>
                                 {questions[currentQuestion].answerOptions.map((answerOption) => (
-                                    <button className="rounded-lg p-2" onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+                                    <button className="rounded-lg p-2 m-2" style={{backgroundColor:"#252d4a"}} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
                                 ))}
                             </div>
-                        </>
+                        </div>
                     )}
                 </div>
             </div>

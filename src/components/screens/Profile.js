@@ -25,27 +25,26 @@ function Profile() {
         navigator.clipboard.writeText(context.user.referral)
         document.execCommand('copy');
     }
-    
+
     return (
         <div>
             <div className="container-fluid" style={{ marginTop: '120px' }}>
-                <div className="card mb-4" style={{ maxWidth: '500px', margin: 'auto' }}>
-                    <div className="row g-0 items-center">
+                <div className="mb-4" style={{ maxWidth: '500px', margin: 'auto' }}>
+                    <div className="row g-0 border items-center rounded-xl shadow-md border">
                         <div className="col-md-4">
-                            <img src={context.user?.picture} className="img-fluid rounded-full w-full" alt="Profile pic" />
+                                <img src={context.user?.picture || "img_avatar3.png"} className="shadow-xl border rounded-full w-full" alt="Profile pic" />
                         </div>
                         <div className="col-md-8">
                             <div className="card-body flex items-center justify-center flex-col">
-                                <h5 className="card-title text-center">{context.user?.name}</h5>
-                                <br />
-                                <p className="card-text">{context.user?.email}</p>
+                                <h5 className="text-center">{context.user?.name}</h5>
+                                <p className="card-text text-gray-500 text-bold">{context.user?.email}</p>
                                 <p className="card-text flex items-center w-40 justify-around"><b>Referral: </b>{context.user?.referral} <button onClick={copyReff}><FiCopy/></button></p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="card mb-5" style={{ maxWidth: '500px', margin: 'auto' }}>
+                <div className="border mb-5 shadow-md rounded-lg" style={{ maxWidth: '500px', margin: 'auto' }}>
                     <h5 className="card-header text-center"><span className="text-xl font-bold text-pink-500">Myntra Coins</span></h5>
                     <div className="card-body">
                         <h5 className="card-title mb-4 text-center">Total number of myntra coins earned - <span className="text-pink-500">{context.user?.coins}</span></h5>

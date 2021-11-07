@@ -36,7 +36,7 @@ function CardComponent({item}){
     const image=item.image;
     return (
         <Col>
-            <Card>
+            <Card className="shadow-md">
                 <Card.Img variant="top" src={image} />
                 <Card.Body>
                     <Card.Title>Rs. {price}</Card.Title>
@@ -119,7 +119,7 @@ function Home() {
                         <div className="container-fluid" style={{ marginTop: '10px', marginBottom: '40px' }}>
                             <Row xs={1} md={2} className="g-4" style={{ marginTop: '20px' }}>
                                 <Col style={{ margin: 'auto' }}>
-                                    <Card>
+                                    <Card className="shadow-md">
                                         <Card.Body>
                                             <Card.Title className="text-lg text-center m-8 text-gray-700 font-bold">Winner</Card.Title>
                                             <div style={{display: "flex", justifyContent: "center"}}>
@@ -135,7 +135,7 @@ function Home() {
                             </Row>
                             <Row xs={1} md={2} className="g-4" style={{ marginTop: '5px' }}>
                                 <Col>
-                                    <Card>
+                                    <Card className="shadow-md">
                                         <Card.Body>
                                             <Card.Title className="text-lg text-center m-8 text-gray-700 font-bold">Second</Card.Title>
                                             <div style={{display: "flex", justifyContent: "center"}}>
@@ -149,7 +149,7 @@ function Home() {
                                     </Card>
                                 </Col>
                                 <Col>
-                                    <Card>
+                                    <Card className="shadow-md">
                                         <Card.Body>
                                             <Card.Title className="text-lg text-center m-8 text-gray-700 font-bold">Third</Card.Title>
                                             <div style={{display: "flex", justifyContent: "center"}}>
